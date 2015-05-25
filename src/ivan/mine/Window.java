@@ -13,7 +13,7 @@ public class Window extends JFrame{
 		this.col = col;
 		this.mines = mines;
 		this.main = main;
-		super.setIconImage(Source.getImage(16).getImage());
+		super.setIconImage(Resource.getImage(16).getImage());
 		super.setResizable(false);
 		super.setLayout(new BorderLayout());
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

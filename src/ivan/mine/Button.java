@@ -37,7 +37,7 @@ public class Button extends JButton{
 		return true;
 	}
 	private void dig(){
-		super.setIcon(Source.getImage(num));
+		super.setIcon(Resource.getImage(num));
 		super.setRolloverIcon(null);
 		super.setPressedIcon(null);
 		flag = false;
@@ -90,25 +90,25 @@ public class Button extends JButton{
 		}
 	}
 	private void setFlag(){
-		super.setIcon(Source.getImage(9));
-		super.setRolloverIcon(Source.getImage(10));
-		super.setPressedIcon(Source.getImage(9));
+		super.setIcon(Resource.getImage(9));
+		super.setRolloverIcon(Resource.getImage(10));
+		super.setPressedIcon(Resource.getImage(9));
 		flag = true;
 		question = false;
 		clear = false;
 	}
 	public void setNormal(){
-		super.setIcon(Source.getImage(11));
-		super.setRolloverIcon(Source.getImage(12));
-		super.setPressedIcon(Source.getImage(0));
+		super.setIcon(Resource.getImage(11));
+		super.setRolloverIcon(Resource.getImage(12));
+		super.setPressedIcon(Resource.getImage(0));
 		flag = false;
 		question = false;
 		clear = false;
 	}
 	private void setQuestion(){
-		super.setIcon(Source.getImage(13));
-		super.setRolloverIcon(Source.getImage(14));
-		super.setPressedIcon(Source.getImage(15));
+		super.setIcon(Resource.getImage(13));
+		super.setRolloverIcon(Resource.getImage(14));
+		super.setPressedIcon(Resource.getImage(15));
 		flag = false;
 		question = true;
 		clear = false;
