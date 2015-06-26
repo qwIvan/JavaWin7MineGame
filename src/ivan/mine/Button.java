@@ -72,7 +72,7 @@ public class Button extends JButton{
 		if(flag||clear)return -2;
 		if(mine)return -1;
 		this.dig();
-		this.main.getWindow().getPane().clear();
+		this.main.getWindow().getPanel().clear();
 		if(num==0)
 			for(Button mls:around)
 				mls.left();

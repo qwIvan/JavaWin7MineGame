@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Window extends JFrame{
 	private Foot foot;
-	private Pane pane;
+	private Panel panel;
 	private Main main;
 	private int row = 10,col = 10,mines = 10;
 	public Window(int row,int col,int mines,Main main){
@@ -24,8 +24,8 @@ public class Window extends JFrame{
 	public Foot getFoot() {
 		return foot;
 	}
-	public Pane getPane() {
-		return pane;
+	public Panel getPanel() {
+		return panel;
 	}
 	private void updateUI(){
 		super.setVisible(false);
@@ -34,14 +34,14 @@ public class Window extends JFrame{
 		super.setVisible(true);
 	}
 	public void reload(){
-		if(pane!=null)super.remove(pane);
+		if(panel !=null)super.remove(panel);
 		if(foot!=null)super.remove(foot);
-		super.add(pane=new Pane(row, col, mines,this.main),BorderLayout.CENTER);
+		super.add(panel =new Panel(row, col, mines,this.main),BorderLayout.CENTER);
 		super.add(foot=new Foot(mines),BorderLayout.SOUTH);
 		this.updateUI();
 	}
 	public void restart(){
-		this.pane.restart();
+		this.panel.restart();
 		if(foot!=null)super.remove(foot);
 		super.add(foot=new Foot(mines),BorderLayout.SOUTH);
 		this.updateUI();
