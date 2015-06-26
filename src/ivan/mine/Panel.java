@@ -104,8 +104,10 @@ public class Panel extends JPanel implements MouseListener{
 		this.pointer = (Button) e.getSource();
 		if((e.getModifiersEx()&InputEvent.BUTTON2_DOWN_MASK)!=0
 				||(e.getModifiersEx()&
-				(InputEvent.BUTTON1_DOWN_MASK|InputEvent.BUTTON3_DOWN_MASK))
-				==(InputEvent.BUTTON1_DOWN_MASK|InputEvent.BUTTON3_DOWN_MASK)){
+				(InputEvent.BUTTON1_DOWN_MASK|
+				InputEvent.BUTTON3_DOWN_MASK))
+				==(InputEvent.BUTTON1_DOWN_MASK|
+				InputEvent.BUTTON3_DOWN_MASK)){
 			pointer.middleDown(true);
 		}else{
 			pointer.leftDown((e.getModifiersEx()
