@@ -81,7 +81,8 @@ public class Panel extends JPanel implements MouseListener{
 		if(e.getButton()==1&&e.getClickCount()==2){
 			this.middle();
 		}else if(e.getButton()==2||e.getButton()==1&&
-				(e.getModifiersEx()&InputEvent.BUTTON3_DOWN_MASK)!=0
+				(e.getModifiersEx()&
+				InputEvent.BUTTON3_DOWN_MASK)!=0
 				||e.getButton()==3&&(e.getModifiersEx()&
 				InputEvent.BUTTON1_DOWN_MASK)!=0){
 			pointer.middleDown(true);
@@ -92,7 +93,8 @@ public class Panel extends JPanel implements MouseListener{
 	public void mouseReleased(MouseEvent e) {
 		if(pointer==null)return;
 		if(e.getButton()==2||e.getButton()==1&&
-				(e.getModifiersEx()&InputEvent.BUTTON3_DOWN_MASK)
+				(e.getModifiersEx()&
+				InputEvent.BUTTON3_DOWN_MASK)
 				!=0||e.getButton()==3&&(e.getModifiersEx()&
 				InputEvent.BUTTON1_DOWN_MASK)!=0){
 			this.middle();
@@ -102,7 +104,8 @@ public class Panel extends JPanel implements MouseListener{
 	}
 	public void mouseEntered(MouseEvent e) {
 		this.pointer = (Button) e.getSource();
-		if((e.getModifiersEx()&InputEvent.BUTTON2_DOWN_MASK)
+		if((e.getModifiersEx()&
+				InputEvent.BUTTON2_DOWN_MASK)
 				!=0||(e.getModifiersEx()&
 				(InputEvent.BUTTON1_DOWN_MASK|
 				InputEvent.BUTTON3_DOWN_MASK))
@@ -110,8 +113,8 @@ public class Panel extends JPanel implements MouseListener{
 				InputEvent.BUTTON3_DOWN_MASK)){
 			pointer.middleDown(true);
 		}else{
-			pointer.leftDown((e.getModifiersEx()
-					&InputEvent.BUTTON1_DOWN_MASK)!=0);
+			pointer.leftDown((e.getModifiersEx()&
+					InputEvent.BUTTON1_DOWN_MASK)!=0);
 		}
 	}
 	public void mouseExited(MouseEvent e) {
