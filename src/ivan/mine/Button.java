@@ -1,10 +1,11 @@
 package ivan.mine;
+
+import javax.swing.*;
 import java.util.LinkedList;
 import java.util.List;
-import javax.swing.JButton;
-@SuppressWarnings("serial")
+
 public class Button extends JButton{
-	private List<Button> around = new LinkedList<Button>();
+	private List<Button> around = new LinkedList();
 	private boolean clear;
 	private boolean flag;
 	private boolean question;

@@ -1,14 +1,12 @@
 package ivan.mine;
 
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Random;
 
-import javax.swing.JPanel;
-
-@SuppressWarnings("serial")
 public class Pane extends JPanel implements MouseListener{
 	private final Button[] button;
 	private final Main main;
@@ -80,7 +78,8 @@ public class Pane extends JPanel implements MouseListener{
 		if(pointer==null)return;
 		if(e.getButton()==1&&e.getClickCount()==2){
 			this.middle();
-		}else if(e.getButton()==2||e.getButton()==1&&(e.getModifiersEx()&InputEvent.BUTTON3_DOWN_MASK)!=0||e.getButton()==3&&(e.getModifiersEx()&InputEvent.BUTTON1_DOWN_MASK)!=0){
+		}else if(e.getButton()==2||e.getButton()==1&&(e.getModifiersEx()&InputEvent.BUTTON3_DOWN_MASK)!=0||
+				e.getButton()==3&&(e.getModifiersEx()&InputEvent.BUTTON1_DOWN_MASK)!=0){
 			pointer.middleDown(true);
 		}else if(e.getButton()==3){
 			pointer.right();
@@ -88,7 +87,8 @@ public class Pane extends JPanel implements MouseListener{
 	}
 	public void mouseReleased(MouseEvent e) {
 		if(pointer==null)return;
-		if(e.getButton()==2||e.getButton()==1&&(e.getModifiersEx()&InputEvent.BUTTON3_DOWN_MASK)!=0||e.getButton()==3&&(e.getModifiersEx()&InputEvent.BUTTON1_DOWN_MASK)!=0){
+		if(e.getButton()==2||e.getButton()==1&&(e.getModifiersEx()&InputEvent.BUTTON3_DOWN_MASK)!=0||
+				e.getButton()==3&&(e.getModifiersEx()&InputEvent.BUTTON1_DOWN_MASK)!=0){
 			this.middle();
 		}else if(e.getButton()==1){
 			this.left();
@@ -96,7 +96,9 @@ public class Pane extends JPanel implements MouseListener{
 	}
 	public void mouseEntered(MouseEvent e) {
 		this.pointer = (Button) e.getSource();
-		if((e.getModifiersEx()&InputEvent.BUTTON2_DOWN_MASK)!=0||(e.getModifiersEx()&(InputEvent.BUTTON1_DOWN_MASK|InputEvent.BUTTON3_DOWN_MASK))==(InputEvent.BUTTON1_DOWN_MASK|InputEvent.BUTTON3_DOWN_MASK)){
+		if((e.getModifiersEx()&InputEvent.BUTTON2_DOWN_MASK)!=0||
+				(e.getModifiersEx()&(InputEvent.BUTTON1_DOWN_MASK|InputEvent.BUTTON3_DOWN_MASK))
+				==(InputEvent.BUTTON1_DOWN_MASK|InputEvent.BUTTON3_DOWN_MASK)){
 			pointer.middleDown(true);
 		}else{
 			pointer.leftDown((e.getModifiersEx()&InputEvent.BUTTON1_DOWN_MASK)!=0);

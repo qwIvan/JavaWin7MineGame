@@ -1,5 +1,6 @@
 package ivan.mine;
 import javax.swing.ImageIcon;
+
 public class Resource {
 	private static final String path = "img/";
 	private static final ImageIcon[] imgs = {

@@ -1,7 +1,8 @@
 package ivan.mine;
+
 import javax.swing.*;
 import java.awt.*;
-@SuppressWarnings("serial")
+
 public class Window extends JFrame{
 	private Foot foot;
 	private Pane pane;

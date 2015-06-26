@@ -1,11 +1,8 @@
 package ivan.mine;
 
-import java.awt.BorderLayout;
+import javax.swing.*;
+import java.awt.*;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-@SuppressWarnings("serial")
 public class Foot extends JPanel{
 	private int sec;
 	private int mines;

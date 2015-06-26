@@ -21,7 +21,8 @@ public class Main {
 		if(last>0)last = 0;
 		last--;
 		String[] jbt = {"Exit","Play again","Start a new game"};
-		int num = JOptionPane.showOptionDialog(null, "You lose!", "Info", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, jbt, jbt[2]);
+		int num = JOptionPane.showOptionDialog(null, "You lose!", "Info",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, jbt, jbt[2]);
 		switch (num) {
 			case 0:this.window.dispose();break;
 			case 1:this.window.restart();break;
@@ -33,7 +34,8 @@ public class Main {
 		if(last<0)last = 0;
 		last++;
 		String[] jbt = {"Start a new game","Exit"};
-		int num = JOptionPane.showOptionDialog(null, "You win!", "Congratulation!", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, jbt, jbt[0]);
+		int num = JOptionPane.showOptionDialog(null, "You win!", "Congratulation!",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, jbt, jbt[0]);
 		switch (num) {
 			case 0:this.window.reload();break;
 			case 1:this.window.dispose();break;
